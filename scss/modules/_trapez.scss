@@ -1,0 +1,10 @@
+.trapez{
+  background: #000;
+  &__big{
+    @include size(526px, 0);
+    border-radius: 55px;
+    border-left: 526px solid #fff;
+    border-right: 526px solid transparent;
+    border-bottom: 772px solid #fff;
+  }
+}

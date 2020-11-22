@@ -1,0 +1,28 @@
+.btn{
+   font-weight: 600;
+   font-size: 18px;
+   text-transform: uppercase;
+   color: var(--color);
+   padding: 15px 40px;
+   background: var(--bgr);
+   border-radius: 25px;
+   display: inline-block;
+   position: relative;
+   overflow: hidden;
+   transition: all .5s ease;
+   z-index: 1;
+   &__icon{
+      @include pos(absolute, $r: -15px);
+      opacity: 0;
+      transition: all .6s ease;
+      color: #165082;
+   }
+   &:hover{
+      color: #165082;
+      .btn__icon{
+         @include pos($t: 16px, $r: 15px);
+         opacity: 1;
+         z-index: 2;
+      }
+   }
+}

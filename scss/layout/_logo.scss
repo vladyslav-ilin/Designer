@@ -1,0 +1,16 @@
+.logo{
+  position: relative;
+  &__title{
+    @include align(false, true, absolute);
+    top: 32px;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--color);
+    transition: all .3s ease;
+    &:hover{
+      color: #165082;
+    }
+  }
+}

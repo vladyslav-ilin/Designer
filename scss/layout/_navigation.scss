@@ -1,0 +1,18 @@
+.navigation{
+   @include pos(fixed, $t:0, $l:0, $r:0, $z:99);
+   padding: 0 15px;
+   position: fixed;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: rgba(40, 47, 61, 0.7);
+   &__item{
+      display: flex;
+   }
+   &__list{
+      margin-left: 70px;
+   }
+   &__link{
+      color: var(--color);
+   }
+}
