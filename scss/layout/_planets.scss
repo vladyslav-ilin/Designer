@@ -1,0 +1,24 @@
+.planets{
+    background: url('../../images/observatory.png') no-repeat center;
+    background-size: cover;
+    min-height: 1506px;
+    padding-top: 1px;
+    &__item{
+        width: 48%;
+        padding: 70px 30px 100px;
+        border-radius: 37px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(108.23deg, #171123 16.72%, #36137B 95.41%);
+        &--left{
+            margin-top: 40%;
+        }
+        &--right{
+            background: linear-gradient(249.92deg, #171124 -4.27%, #300B3E 96.41%);
+            float: right;
+            position: relative;
+            top: -50px;
+        }
+    }
+}
