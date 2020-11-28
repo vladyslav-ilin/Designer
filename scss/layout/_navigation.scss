@@ -1,6 +1,6 @@
 .navigation{
    @include pos(fixed, $t:0, $l:0, $r:0, $z:99);
-   padding: 0 15px;
+   padding-right: 30px;
    position: fixed;
    display: flex;
    justify-content: space-between;
@@ -14,5 +14,23 @@
    }
    &__link{
       color: var(--color);
+      transition: all .6s ease;
+      display: inline-block;
+      position: relative;
+      &::before{
+         @include size(100%, 3px);
+         @include pos(absolute, $t: -4px, $l: 0);
+         content: '';
+         background: var(--bgr);
+         opacity: 0;
+         transition: all .6s ease;
+      }
+      &:hover{
+         color: var(--bgr);
+         &::before{
+            @include pos(absolute, $t: 25px, $l: 0);
+            opacity: 1;
+         }
+      }
    }
 }

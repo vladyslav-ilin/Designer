@@ -1,0 +1,60 @@
+.footer{
+  padding-bottom: 1px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &__map{
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    &::before{
+      @include size(100%);
+      @include pos(absolute, $t: 0, $l:0);
+      content: '';
+      background: rgba(14, 34, 68, 0.47);
+    }
+  }
+  &__contact{
+    padding: 75px 15px 90px 110px;
+    width: 50%;
+    background: #150F22;
+  }
+  &__title{
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 7.2px;
+    margin-bottom: 60px;
+  }
+  &__info{
+    display: flex;
+  }
+  &__number{
+    margin: 0 45px 30px 0;
+  }
+  &__tel{
+    color: var(--color);
+    letter-spacing: 2.7px;
+    &--left{
+      margin-left: 28px;
+    }
+  }
+  &__icon{
+    color: var(--color);
+    opacity: 0.8;
+  }
+  &__mail{
+    color: var(--color);
+    letter-spacing: 1.2px;
+  }
+  &__street{
+    letter-spacing: 1px;
+    margin-bottom: 70px;
+  }
+  &--icon-map{
+    margin-right: 10px;
+  }
+  &__rocket{
+    @include align(false, true, absolute);
+    bottom: 0;
+  }
+}

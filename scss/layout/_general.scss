@@ -30,8 +30,14 @@ body{
 	color: var(--color);
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 .container-fluid{
-	max-width: 1200px;
+	max-width: 1310px;
 	padding: 0 15px;
 	margin: 0 auto;
 	width: 100%;

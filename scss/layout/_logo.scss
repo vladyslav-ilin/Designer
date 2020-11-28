@@ -1,5 +1,10 @@
 .logo{
   position: relative;
+  &:hover{
+    & .logo__title{
+      color: var(--bgr);
+    }
+  }
   &__title{
     @include align(false, true, absolute);
     top: 32px;
@@ -9,8 +14,5 @@
     text-transform: uppercase;
     color: var(--color);
     transition: all .3s ease;
-    &:hover{
-      color: #165082;
-    }
   }
 }

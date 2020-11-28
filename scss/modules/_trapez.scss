@@ -1,10 +1,90 @@
 .trapez{
-  background: #000;
+  padding-top: 180px;
+  &__item{
+   justify-content: space-between;
+    display: flex;
+    position: relative;
+    margin-bottom: 165px;
+    &::before{
+      @include size(40%, 6px);
+      @include align(true, false, absolute);
+      left: 34.5%;
+      border-radius: 55px;
+      content: '';
+      background: linear-gradient(124.11deg, #4D6EDF 5.36%, rgba(34, 5, 62, 0.67) 110.14%);
+      transform: rotate(67deg);
+    }
+    &--second{
+      &::before{
+        @include size(40%, 6px);
+        @include align(true, false, absolute);
+        left: 25%;
+        border-radius: 55px;
+        content: '';
+        background: linear-gradient(124.11deg, #032448 5.36%, #FD8F76 110.14%);
+        transform: rotate(-67deg);
+      }
+    }
+    &--third{
+      margin-bottom: 120px;
+      &::before{
+        @include size(40%, 6px);
+        @include align(true, false, absolute);
+        left: 34%;
+        border-radius: 55px;
+        content: '';
+        background: linear-gradient(125.57deg, #A963B5 5.24%, #010B15 103.97%);
+        transform: rotate(67deg);
+      }
+    }
+  }
   &__big{
-    @include size(526px, 0);
-    border-radius: 55px;
-    border-left: 526px solid #fff;
-    border-right: 526px solid transparent;
-    border-bottom: 772px solid #fff;
+    width: 66%;
+  }
+  &__small{
+    width: 54%;
+    margin-left: -12%;
+    position: relative;
+    &--second{
+      margin-left: 0;
+      margin-right: -12%;
+    }
+  }
+  &__info{
+    @include pos(absolute, $t:0, $l:0);
+    padding: 95px 80px 15px 210px;
+    &--second{
+      padding-right: 210px;
+      padding-left: 55px;
+    }
+    &--third{
+      padding-right: 75px;
+      padding-left: 170px;
+    }
+  }
+  &__title{
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 5.28px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    &--third{
+      letter-spacing: 2.4px;
+    }
+  }
+  &__text{
+    line-height: 34px;
+    margin-bottom: 5px;
+  }
+  &__btn{
+    color: currentColor;
+    border-bottom: 2px solid var(--color);
+    font-size: 20px;
+    transition: all .3s ease;
+    &:hover{
+      color: var(--bgr);
+      border-block-color: var(--bgr);
+    }
   }
 }

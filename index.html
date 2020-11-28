@@ -19,7 +19,7 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class="header" id="header">
 		<div class="container-fluid">
 			<div class="header__content">
 				<nav class="navigation">
@@ -47,7 +47,7 @@
 						<p class="header__text">Экскурсия по звёздам</p>
 						<img class="header__img" src="images/header-star-group.png" alt="Planets">
 					</div>
-					<a class="btn" href="#">Заказать єкскурсию <i class="icon-star btn__icon"></i></a>
+					<a class="btn" href="#"><span class="btn__line">Заказать экскурсию</span></a>
 				</div>
 			</div>
 		</div>
@@ -60,48 +60,57 @@
 			<div class="trapez">
 				<div class="trapez__item">
 					<div class="trapez__big">
-						<!-- <img class="trapez__img" src="images/telescope-1.jpg" alt="Images"> -->
+						<img src="images/telescope-1.png" alt="Trapezoid" class="trapez__img">
 					</div>
 					<div class="trapez__small">
-						<h2 class="title">выбор телескопа</h2>
-						<p class="text">
-							Для самостоятельной аренды в Ва шем распоряжении за 300 грн/сутки есть множество телескопов,
-							очень простая
-							инструкция по их сборке, а также карты Луны и звёздного неба.
-						</p>
-						<a class="trapez__btn" href="#">Подробнее</a>
+						<img src="images/trapez-1.png" class="trapez__small-1">
+						<div class="trapez__info">
+							<h2 class="trapez__title">выбор телескопа</h2>
+							<p class="trapez__text">
+								Для самостоятельной аренды в Ва шем распоряжении за 300 грн/сутки есть множество телескопов,
+								очень простая
+								инструкция по их сборке, а также карты Луны и звёздного неба.
+							</p>
+							<a class="trapez__btn" href="#">Подробнее</a>
+						</div>
+					</div>
+				</div>
+				<div class="trapez__item trapez__item--second">
+					<div class="trapez__small trapez__small--second">
+						<img src="images/trapez-2.png" class="trapez__small-1">
+						<div class="trapez__info trapez__info--second">
+							<h2 class="trapez__title">идея для подарка</h2>
+							<p class="trapez__text">
+								Отличная идея для оригинального подарка возлюбленной, имениннику, ребёнку для общего развития,
+								романтичес кого или проведение эксклюзивной корпоративной вечеринки!..
+							</p>
+							<a class="trapez__btn" href="#">Подробнее</a>
+						</div>
+					</div>
+					<div class="trapez__big">
+						<img src="images/telescope-2.png" alt="Trapezoid" class="trapez__img">
 					</div>
 				</div>
 
-				<!-- <div class="trapez__item">
-					<div class="trapez__small">
-						<h2 class="title">идея для подарка</h2>
-						<p class="text">
-							Отличная идея для оригинального подарка возлюбленной, имениннику, ребёнку для общего развития, романтичес
-							кого или проведение эксклюзивной корпоративной вечеринки!..
-						</p>
-						<a class="trapez__btn" href="#">Подробнее</a>
-					</div>
+				<div class="trapez__item trapez__item--third">
 					<div class="trapez__big">
-						<img class="trapez__img" src="images/telescope-2.jpg" alt="Images">
+						<img src="images/telescope-3.png" alt="Trapezoid" class="trapez__img">
+					</div>
+					<div class="trapez__small">
+						<img src="images/trapez-3.png" class="trapez__small-1">
+						<div class="trapez__info trapez__info--third">
+							<h2 class="trapez__title trapez__title--third">гид по звёздному небу</h2>
+							<p class="trapez__text">
+								Вашим персональным гидом по бескрайнему космосу за 2000 грн будет победитель конкурса любительского
+								телескопостроения в Крымской Астрофизической Обсерватории
+							</p>
+							<a class="trapez__btn" href="#">Подробнее</a>
+						</div>
 					</div>
 				</div>
-
-				<div class="trapez__item">
-					<div class="trapez__big">
-						<img class="trapez__img" src="images/telescope-3.jpg" alt="Images">
-					</div>
-					<div class="trapez__small">
-						<h2 class="title">гид по звёздному небу</h2>
-						<p class="text">
-							Вашим персональным гидом по бескрайнему космосу за 2000 грн будет победитель конкурса любительского
-							телескопостроения в Крымской Астрофизической Обсерватории
-						</p>
-						<a class="trapez__btn" href="#">Подробнее</a>
-					</div>
-				</div> -->
 
 			</div>
+		</div>
 
 		</div>
 		<div class="sun">
@@ -127,30 +136,101 @@
 		</div>
 		<div class="planets">
 			<div class="container-fluid">
-					<div class="planets__item planets__item--left">
-						<h2 class="title">В пределах города</h2>
-						<p class="text">При городской фоновой засветке неба Вам будут доступны только яркие объекты, к числу
-							которых помимо Луны относятся и планеты. В наш телескоп вы сможете насладится кольцами Сатурна,
-							увидеть вихревые полосы и спутники Юпитера, моря и полярную шапку Марса, а также фазу Венеры и
-							Меркурия. </p>
-					</div>
-					<div class="planets__item planets__item--right">
-						<h2 class="title">За городом</h2>
-						<p class="text">При городской фоновой засветке неба Вам будут доступны только яркие объекты, к числу
-							которых помимо Луны относятся и планеты. В наш телескоп вы сможете насладится кольцами Сатурна,
-							увидеть вихревые полосы и спутники Юпитера, моря и полярную шапку Марса, а также фазу Венеры и
-							Меркурия. 
-						</p>
-					</div>
+				<div class="planets__item planets__item--left">
+					<h2 class="title">В пределах города</h2>
+					<p class="text">При городской фоновой засветке неба Вам будут доступны только яркие объекты, к числу
+						которых помимо Луны относятся и планеты. В наш телескоп вы сможете насладится кольцами Сатурна,
+						увидеть вихревые полосы и спутники Юпитера, моря и полярную шапку Марса, а также фазу Венеры и
+						Меркурия. </p>
+				</div>
+				<div class="planets__item planets__item--right">
+					<h2 class="title">За городом</h2>
+					<p class="text">При городской фоновой засветке неба Вам будут доступны только яркие объекты, к числу
+						которых помимо Луны относятся и планеты. В наш телескоп вы сможете насладится кольцами Сатурна,
+						увидеть вихревые полосы и спутники Юпитера, моря и полярную шапку Марса, а также фазу Венеры и
+						Меркурия.
+					</p>
+				</div>
 			</div>
 		</div>
 		</div>
 	</section>
 	<section class="gallery">
+		<img src="images/gallery-bg.png" alt="Gallery-bgr" class="gallery__bgr">
 		<div class="container-fluid">
-			
+			<div class="gallery__logo">
+				<p class="gallery__text">Фотогалерея</p>
+				<img class="gallery__logo-img" src="images/gallery-logo.png" alt="Gallery-logo">
+			</div>
+			<div class="gallery__items">
+				<ul class="gallery__left">
+					<li class="gallery__item">
+						<img src="images/gallery/gallery-1.png" alt="Gallery-img" class="gallery__img">
+					</li>
+					<li class="gallery__item">
+						<img src="images/gallery/gallery-4.png" alt="Gallery-img" class="gallery__img">
+					</li>
+					<li class="gallery__item">
+						<img src="images/gallery/gallery-7.png" alt="Gallery-img" class="gallery__img">
+					</li>
+				</ul>
+				<ul class="gallery__center">
+					<li class="gallery__item">
+						<img src="images/gallery/gallery-2.png" alt="Gallery-img" class="gallery__img">
+					</li>
+					<li class="gallery__item">
+						<img src="images/gallery/gallery-5.png" alt="Gallery-img" class="gallery__img">
+					</li>
+					<li class="gallery__item">
+						<img src="images/gallery/gallery-8.png" alt="Gallery-img" class="gallery__img">
+					</li>
+				</ul>
+				<ul class="gallery__right">
+					<li class="gallery__item">
+						<img src="images/gallery/gallery-3.png" alt="Gallery-img" class="gallery__img">
+					</li>
+					<li class="gallery__item">
+						<img src="images/gallery/gallery-6.png" alt="Gallery-img" class="gallery__img">
+					</li>
+					<li class="gallery__item">
+						<img src="images/gallery/gallery-9.png" alt="Gallery-img" class="gallery__img">
+					</li>
+				</ul>
+			</div>
 		</div>
 	</section>
+
+	<footer class="footer">
+		<div class="footer__map">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2586.4341058401483!2d34.54928281274076!3d49.58956264521581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d825f6201e3de1%3A0xfa1c1f1114c6f7b0!2z0JrQvtGA0L_Rg9GB0L3Ri9C5INGB0LDQtA!5e0!3m2!1sru!2sua!4v1606561551368!5m2!1sru!2sua"
+				width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+				tabindex="0"></iframe>А
+		</div>
+		<div class="footer__contact">
+			<h1 class="footer__title">Контакты</h1>
+			<div class="footer__info">
+				<div class="footer__number">
+					<a class="footer__tel" href="tel:0682268646"><i class="icon-tel footer__icon footer--icon-email"></i>
+						068-226-86-46</a><br>
+					<a class="footer__tel footer__tel--left" href="tel:0939119663">093-911-96-63</a>
+				</div>
+				<a href="mailto:vilisvir@i.ua" class="footer__mail"><i class="icon-email footer__icon footer--icon-email"></i>
+					vilisvir@i.ua</a>
+			</div>
+			<div class="footer__street"><i class="icon-map footer__icon footer--icon-map"></i> г. Киев, ул. Василенко 14-б
+			</div>
+			<form class="form" action="#">
+				<h1 class="form__title">Остались вопросы?</h1>
+				<input class="form__tel form__input" type="number" name="tel" placeholder="Ваш телефон">
+				<input class="form__text form__input" type="text" name="text" placeholder="Как к вам обращаться">
+				<button class="form__button" type="submit"><span class="form__line">Отправить</span></button>
+			</form>
+		</div>
+		<a class="footer__rocket" href="#header">
+			<img class="footer__rocket-img" src="images/footer-rocket.png" alt="Rocket">
+		</a>
+	</footer>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 .rocket {
-  @include pos(fixed, $r: 0, $b: -30px);
+  @include pos(fixed, $r: 10px, $b: -30px, $z: 99);
   &:hover {
     & .rocket__img {
       animation: animationFrames linear 0.8s;

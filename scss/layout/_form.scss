@@ -1,0 +1,53 @@
+.form{
+  width: 50%;
+  &__title{
+    font-size: 24px;
+    letter-spacing: 4.8px;
+    margin-bottom: 30px;
+  }
+  &__input{
+    width: 100%;
+    color: var(--color);
+    background: transparent;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 5px;
+    margin-bottom: 35px;
+    font-size: 13px;
+    letter-spacing: 2.6px;
+    transition: all .3s ease;
+    &:focus{
+      border-bottom-color: var(--bgr);
+    }
+    &::placeholder{
+      font-size: 13px;
+      letter-spacing: 2.6px;
+      color: #8C8C8C;
+    }
+  }
+  &__button{
+    padding: 10px 15px;
+    letter-spacing: 2.8px;
+    color: var(--color);
+    background: #303061;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    &::before{
+      @include size(0, 100%);
+      @include pos(absolute, $t:0, $l:0);
+      content: '';
+      background: var(--bgr);
+      transition: all .5s ease;
+    }
+    &:hover{
+      &::before{
+        @include size(100%);
+      }
+    }
+  }
+  &__line{
+    position: relative;
+    z-index: 5;
+  }
+}

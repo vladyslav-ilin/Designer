@@ -1,6 +1,7 @@
 .header{
    background: url('../images/header-bgr.jpg') no-repeat center;
    background-size: cover;
+   background-attachment: fixed;
    &__content{
       min-height: 100vh;
       display: flex;

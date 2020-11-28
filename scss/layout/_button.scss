@@ -9,20 +9,21 @@
    display: inline-block;
    position: relative;
    overflow: hidden;
-   transition: all .5s ease;
    z-index: 1;
-   &__icon{
-      @include pos(absolute, $r: -15px);
-      opacity: 0;
-      transition: all .6s ease;
-      color: #165082;
+   position: relative;
+   &__line{
+      position: relative;
+      z-index: 1;
+   }
+   &::before{
+      @include size(100%, 0);
+      @include pos(absolute, $t:0, $l:0);
+      content: '';
+      transition: all .7s ease;
    }
    &:hover{
-      color: #165082;
-      .btn__icon{
-         @include pos($t: 16px, $r: 15px);
-         opacity: 1;
-         z-index: 2;
+      &::before{
+         @include size(100%);
       }
    }
 }

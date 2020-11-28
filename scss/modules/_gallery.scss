@@ -1,0 +1,45 @@
+.gallery{
+  padding: 90px 0 60px;
+  position: relative;
+  background: linear-gradient(180deg, #121214 14.94%, #1C1034 100%);
+  &__bgr{
+    @include align(true, true, absolute);
+    z-index: 1;
+  }
+  &__logo{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 85px;
+  }
+  &__text{
+    font-size: 36px;
+    letter-spacing: 7.2px;
+    font-weight: 700;
+    position: relative;
+    z-index: 5;
+  }
+  &__logo-img{
+    @include align(true, false, absolute);
+    right: -75px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+  }
+  &__left{
+    width: 37.5%;
+  }
+  &__center{
+    margin: 0 2.5%;
+    width: 36.5%;
+    padding-top: 55px;
+  }
+  &__right{
+    width: 30%;
+  }
+  &__item{
+    margin-bottom: 40px;
+  }
+}
