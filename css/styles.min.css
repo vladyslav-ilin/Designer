@@ -372,6 +372,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .info {
   margin-bottom: 90px;
+  z-index: 5;
+  position: relative;
 }
 
 .info__title {
@@ -521,67 +523,67 @@ input[type=number]::-webkit-outer-spin-button {
 
 .parallax--1 {
   position: absolute;
-  top: 0px;
+  top: -700px;
   left: 15px;
 }
 
 .parallax--2 {
   position: absolute;
-  top: 0px;
+  top: -650px;
   left: 20%;
 }
 
 .parallax--3 {
   position: absolute;
-  top: 0px;
+  top: -450px;
   left: 5%;
 }
 
 .parallax--4 {
   position: absolute;
-  top: 0px;
+  top: -570px;
   left: 60%;
 }
 
 .parallax--5 {
   position: absolute;
-  top: 0px;
+  top: -650px;
   left: 70%;
 }
 
 .parallax--6 {
   position: absolute;
-  top: 0px;
+  top: -420px;
   left: 50%;
 }
 
 .parallax--7 {
   position: absolute;
-  top: 0px;
+  top: -500px;
   left: 80%;
 }
 
 .parallax--8 {
   position: absolute;
-  top: 0px;
+  top: -650px;
   left: 85%;
 }
 
 .parallax--9 {
   position: absolute;
-  bottom: -1500px;
+  top: -500px;
   left: 87%;
 }
 
 .parallax--10 {
   position: absolute;
-  bottom: -1050px;
+  top: -650px;
   left: 60%;
 }
 
 .parallax--11 {
   position: absolute;
-  top: 450px;
+  top: -600px;
   left: 28%;
 }
 
@@ -695,6 +697,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .trapez__big {
   width: 66%;
+  cursor: pointer;
 }
 
 .trapez__small {
@@ -816,7 +819,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .gallery__center {
   margin: 0 2.5%;
-  width: 36.5%;
+  width: 34.5%;
   padding-top: 55px;
 }
 

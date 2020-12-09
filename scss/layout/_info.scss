@@ -1,5 +1,7 @@
 .info{
     margin-bottom: 90px;
+    z-index: 5;
+    position: relative;
     &__title{
         font-size: 36px;
         font-weight: 800;
