@@ -41,5 +41,14 @@
   }
   &__item{
     margin-bottom: 40px;
+    overflow: hidden;
+    border-radius: 41px;
+  }
+  &__img{
+    transition: all .5s ease;
+    display: block;
+    &:hover{
+      transform: rotate(-5deg) scale(1.15);
+    }
   }
 }

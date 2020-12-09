@@ -1,0 +1,39 @@
+.parallax{
+  @include align(true, true, absolute);
+  min-height: 360px;
+  width: 100%;
+  max-width: 1310px;
+  &--1{
+    @include pos(absolute, $t: 0px, $l:15px);
+  }
+  &--2{
+    @include pos(absolute, $t: 0px, $l:20%);
+  }
+  &--3{
+    @include pos(absolute, $t: 0px, $l:5%);
+  }
+  &--4{
+    @include pos(absolute, $t: 0px, $l:60%);
+  }
+  &--5{
+    @include pos(absolute, $t: 0px, $l:70%);
+  }
+  &--6{
+    @include pos(absolute, $t: 0px, $l:50%);
+  }
+  &--7{
+    @include pos(absolute, $t: 0px, $l:80%);
+  }
+  &--8{
+    @include pos(absolute, $t: 0px, $l:85%);
+  }
+  &--9{
+    @include pos(absolute, $b: -1500px, $l:87%);
+  }
+  &--10{
+    @include pos(absolute, $b: -1050px, $l:60%);
+  }
+  &--11{
+    @include pos(absolute, $t: 450px, $l:28%);
+  }
+}

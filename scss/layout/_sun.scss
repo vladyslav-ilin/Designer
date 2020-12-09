@@ -1,15 +1,20 @@
 .sun{
-    background: url(../../images/sun.png) no-repeat center;
-    background-size: cover;
-    min-height: 360px;
-    text-align: center;
-    margin-bottom: 110px;
+    &__container-fluid{
+        position: relative;
+        min-height: 360px;
+        text-align: center;
+        margin-bottom: 110px;
+    }
     &__title{
         @include align(false, true, relative);
         font-size: 36px;
         font-weight: 800;
         letter-spacing: 7.2px;
-
         margin-bottom: 145px;
     }
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
 }

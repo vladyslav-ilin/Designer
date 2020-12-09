@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   position: relative;
+  overflow: hidden;
   &__map{
     width: 50%;
     overflow: hidden;
@@ -12,6 +13,7 @@
       @include pos(absolute, $t: 0, $l:0);
       content: '';
       background: rgba(14, 34, 68, 0.47);
+      pointer-events: none;
     }
   }
   &__contact{
@@ -30,10 +32,16 @@
   }
   &__number{
     margin: 0 45px 30px 0;
+    &:hover{
+      & .footer__icon{
+        color: var(--bgr);;
+      }
+    }
   }
   &__tel{
     color: var(--color);
     letter-spacing: 2.7px;
+    
     &--left{
       margin-left: 28px;
     }
@@ -41,20 +49,31 @@
   &__icon{
     color: var(--color);
     opacity: 0.8;
+    transition: all .3s ease;
   }
   &__mail{
     color: var(--color);
     letter-spacing: 1.2px;
+    &:hover{
+      & .footer__icon{
+        color: var(--bgr);;
+      }
+    }
   }
   &__street{
     letter-spacing: 1px;
     margin-bottom: 70px;
+    &:hover{
+      & .footer__icon{
+        color: var(--bgr);;
+      }
+    }
   }
   &--icon-map{
     margin-right: 10px;
   }
   &__rocket{
     @include align(false, true, absolute);
-    bottom: 0;
+    bottom: -10px;
   }
 }

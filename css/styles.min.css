@@ -146,15 +146,16 @@ input[type=number]::-webkit-outer-spin-button {
 
 .navigation__link::before {
   width: 100%;
-  height: 3px;
+  height: 2px;
   position: absolute;
-  top: -4px;
+  bottom: -4px;
   left: 0;
   content: '';
   background: var(--bgr);
-  opacity: 0;
-  -webkit-transition: all .6s ease;
-  transition: all .6s ease;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .navigation__link:hover {
@@ -162,10 +163,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .navigation__link:hover::before {
-  position: absolute;
-  top: 25px;
-  left: 0;
-  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .btn {
@@ -348,9 +347,8 @@ input[type=number]::-webkit-outer-spin-button {
   transition: all .3s ease;
 }
 
-.sun {
-  background: url(../../images/sun.png) no-repeat center;
-  background-size: cover;
+.sun__container-fluid {
+  position: relative;
   min-height: 360px;
   text-align: center;
   margin-bottom: 110px;
@@ -365,6 +363,11 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 800;
   letter-spacing: 7.2px;
   margin-bottom: 145px;
+}
+
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
 }
 
 .info {
@@ -468,6 +471,10 @@ input[type=number]::-webkit-outer-spin-button {
   color: #8C8C8C;
 }
 
+.form__input:hover {
+  border-bottom-color: var(--bgr);
+}
+
 .form__button {
   padding: 10px 15px;
   letter-spacing: 2.8px;
@@ -499,6 +506,83 @@ input[type=number]::-webkit-outer-spin-button {
 .form__line {
   position: relative;
   z-index: 5;
+}
+
+.parallax {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  min-height: 360px;
+  width: 100%;
+  max-width: 1310px;
+}
+
+.parallax--1 {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+}
+
+.parallax--2 {
+  position: absolute;
+  top: 0px;
+  left: 20%;
+}
+
+.parallax--3 {
+  position: absolute;
+  top: 0px;
+  left: 5%;
+}
+
+.parallax--4 {
+  position: absolute;
+  top: 0px;
+  left: 60%;
+}
+
+.parallax--5 {
+  position: absolute;
+  top: 0px;
+  left: 70%;
+}
+
+.parallax--6 {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+}
+
+.parallax--7 {
+  position: absolute;
+  top: 0px;
+  left: 80%;
+}
+
+.parallax--8 {
+  position: absolute;
+  top: 0px;
+  left: 85%;
+}
+
+.parallax--9 {
+  position: absolute;
+  bottom: -1500px;
+  left: 87%;
+}
+
+.parallax--10 {
+  position: absolute;
+  bottom: -1050px;
+  left: 60%;
+}
+
+.parallax--11 {
+  position: absolute;
+  top: 450px;
+  left: 28%;
 }
 
 .header {
@@ -742,6 +826,19 @@ input[type=number]::-webkit-outer-spin-button {
 
 .gallery__item {
   margin-bottom: 40px;
+  overflow: hidden;
+  border-radius: 41px;
+}
+
+.gallery__img {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  display: block;
+}
+
+.gallery__img:hover {
+  -webkit-transform: rotate(-5deg) scale(1.15);
+          transform: rotate(-5deg) scale(1.15);
 }
 
 .footer {
@@ -753,6 +850,7 @@ input[type=number]::-webkit-outer-spin-button {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 
 .footer__map {
@@ -769,6 +867,7 @@ input[type=number]::-webkit-outer-spin-button {
   left: 0;
   content: '';
   background: rgba(14, 34, 68, 0.47);
+  pointer-events: none;
 }
 
 .footer__contact {
@@ -794,6 +893,10 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 45px 30px 0;
 }
 
+.footer__number:hover .footer__icon {
+  color: var(--bgr);
+}
+
 .footer__tel {
   color: var(--color);
   letter-spacing: 2.7px;
@@ -806,6 +909,8 @@ input[type=number]::-webkit-outer-spin-button {
 .footer__icon {
   color: var(--color);
   opacity: 0.8;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .footer__mail {
@@ -813,9 +918,17 @@ input[type=number]::-webkit-outer-spin-button {
   letter-spacing: 1.2px;
 }
 
+.footer__mail:hover .footer__icon {
+  color: var(--bgr);
+}
+
 .footer__street {
   letter-spacing: 1px;
   margin-bottom: 70px;
+}
+
+.footer__street:hover .footer__icon {
+  color: var(--bgr);
 }
 
 .footer--icon-map {
@@ -827,5 +940,5 @@ input[type=number]::-webkit-outer-spin-button {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: 0;
+  bottom: -10px;
 }
