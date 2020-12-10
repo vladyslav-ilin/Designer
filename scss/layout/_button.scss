@@ -8,7 +8,6 @@
    border-radius: 25px;
    display: inline-block;
    position: relative;
-   overflow: hidden;
    z-index: 1;
    position: relative;
    &__line{
@@ -26,4 +25,15 @@
          @include size(100%);
       }
    }
+   &__stars{
+      @include align(true, true, absolute);
+   }
+   &__star{
+      @extend [class^="icon-"];
+      @extend .icon-star;
+      &--top{
+          @include pos($t: -150px, $r: 0);
+          z-index: 5;
+      }
+  }
 }

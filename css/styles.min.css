@@ -177,7 +177,6 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 25px;
   display: inline-block;
   position: relative;
-  overflow: hidden;
   z-index: 1;
   position: relative;
 }
@@ -201,6 +200,21 @@ input[type=number]::-webkit-outer-spin-button {
 .btn:hover::before {
   width: 100%;
   height: 100%;
+}
+
+.btn__stars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.btn__star--top {
+  position: absolute;
+  top: -150px;
+  right: 0;
+  z-index: 5;
 }
 
 .title {
@@ -295,11 +309,11 @@ input[type=number]::-webkit-outer-spin-button {
   font-family: "icomoon";
   font-weight: normal;
   font-style: normal;
-  src: url("fonts/icomoon/icomoon.eot?4hk40b");
-  src: url("fonts/icomoon/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon/icomoon.woff2?4hk40b") format("woff2"), url("fonts/icomoon/icomoon.woff?4hk40b") format("woff"), url("fonts/icomoon/icomoon.ttf?4hk40b") format("truetype"), url("fonts/icomoon/icomoon.svg?4hk40b#icomoon") format("svg");
+  src: url("fonts/icomoon/icomoon.eot?apody");
+  src: url("fonts/icomoon/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon/icomoon.woff2?apody") format("woff2"), url("fonts/icomoon/icomoon.woff?apody") format("woff"), url("fonts/icomoon/icomoon.ttf?apody") format("truetype"), url("fonts/icomoon/icomoon.svg?apody#icomoon") format("svg");
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], .btn__star, [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   font-style: normal;
@@ -312,16 +326,20 @@ input[type=number]::-webkit-outer-spin-button {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-email:before {
-  content: "\e900";
-}
-
 .icon-map:before {
   content: "\e901";
 }
 
-.icon-tel:before {
+.icon-star:before, .btn__star:before {
   content: "\e902";
+}
+
+.icon-tel:before {
+  content: "\e903";
+}
+
+.icon-email:before {
+  content: "\e900";
 }
 
 .logo {
@@ -381,10 +399,6 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 800;
   letter-spacing: 7.2px;
   margin-bottom: 30px;
-}
-
-.info__text {
-  line-height: 36px;
 }
 
 .planets {
@@ -577,12 +591,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 .parallax--10 {
   position: absolute;
-  top: -650px;
-  left: 60%;
-}
-
-.parallax--11 {
-  position: absolute;
   top: -600px;
   left: 28%;
 }
@@ -767,8 +775,8 @@ input[type=number]::-webkit-outer-spin-button {
 .gallery {
   padding: 90px 0 60px;
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(14.94%, #121214), to(#1C1034));
-  background: linear-gradient(180deg, #121214 14.94%, #1C1034 100%);
+  background: url("../../images/gallery-bg.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .gallery__bgr {
@@ -944,4 +952,44 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   bottom: -10px;
+}
+
+.button {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f72359;
+  padding: 1em 2em;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+.button span {
+  position: relative;
+  pointer-events: none;
+}
+
+.button::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #4405f7, transparent);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: width .2s ease, height .2s ease;
+  transition: width .2s ease, height .2s ease;
+}
+
+.button:hover::before {
+  --size: 400px;
 }

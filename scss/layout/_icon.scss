@@ -1,4 +1,4 @@
-@include font-face('icomoon', 'fonts/icomoon/icomoon', $ver: '?4hk40b');
+@include font-face('icomoon', 'fonts/icomoon/icomoon', $ver: '?apody');
  
 
 [class^="icon-"], [class*=" icon-"] {
@@ -15,12 +15,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-email:before {
-  content: "\e900";
-}
 .icon-map:before {
   content: "\e901";
 }
-.icon-tel:before {
+.icon-star:before {
   content: "\e902";
 }
+.icon-tel:before {
+  content: "\e903";
+}
+.icon-email:before {
+  content: "\e900";
+}
+

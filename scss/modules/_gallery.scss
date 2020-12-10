@@ -1,7 +1,8 @@
 .gallery{
   padding: 90px 0 60px;
   position: relative;
-  background: linear-gradient(180deg, #121214 14.94%, #1C1034 100%);
+  background: url('../../images/gallery-bg.jpg') no-repeat center;
+  background-size: cover;
   &__bgr{
     @include align(true, true, absolute);
     z-index: 1;

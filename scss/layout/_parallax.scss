@@ -31,9 +31,6 @@
     @include pos(absolute, $t: -500px, $l:87%);
   }
   &--10{
-    @include pos(absolute, $t: -650px, $l:60%);
-  }
-  &--11{
     @include pos(absolute, $t: -600px, $l:28%);
   }
 }
