@@ -1,7 +1,7 @@
 .gallery{
   padding: 90px 0 60px;
   position: relative;
-  background: url('../../images/gallery-bg.jpg') no-repeat center;
+  background: url('../images/gallery-bg.jpg') no-repeat center;
   background-size: cover;
   &__bgr{
     @include align(true, true, absolute);
