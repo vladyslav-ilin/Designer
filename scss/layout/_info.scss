@@ -1,11 +1,13 @@
 .info{
-    margin-bottom: 90px;
     z-index: 5;
     position: relative;
     &__title{
         font-size: 36px;
-        font-weight: 800;
+        font-weight: 700;
         letter-spacing: 7.2px;
         margin-bottom: 30px;
+    }
+    &__text{
+        line-height: 36px;
     }
 }

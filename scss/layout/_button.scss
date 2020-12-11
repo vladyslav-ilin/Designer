@@ -1,4 +1,4 @@
-.btn{
+.btn {
    font-weight: 600;
    font-size: 18px;
    text-transform: uppercase;
@@ -10,30 +10,45 @@
    position: relative;
    z-index: 1;
    position: relative;
-   &__line{
-      position: relative;
-      z-index: 1;
-   }
-   &::before{
-      @include size(100%, 0);
-      @include pos(absolute, $t:0, $l:0);
-      content: '';
-      transition: all .7s ease;
-   }
-   &:hover{
-      &::before{
-         @include size(100%);
+   transition: all .3s ease;
+   &:hover {
+      transform: scale(1.05);
+      & .btn__star{
+         opacity: 1;
+         &--top {
+            @include pos($t: -50px, $r: 0);
+         }
+         &--right {
+            @include pos($t: -10px, $r: -170px);
+         }
+         &--bottom {
+            @include pos($b: -50px, $r: 0);
+         }
+         &--left {
+            @include pos($t: -10px, $l: -170px);
+         }
       }
    }
-   &__stars{
+   &__stars {
       @include align(true, true, absolute);
    }
-   &__star{
+   &__star {
+      color: var(--bgr);
       @extend [class^="icon-"];
       @extend .icon-star;
-      &--top{
-          @include pos($t: -150px, $r: 0);
-          z-index: 5;
+      transition: all .5s ease;
+      opacity: 0;
+      &--top {
+         @include pos($t: -25px, $r: 0);
       }
-  }
+      &--right {
+         @include pos($t: -10px, $r: -145px);
+      }
+      &--bottom {
+         @include pos($b: -25px, $r: 0);
+      }
+      &--left {
+         @include pos($t: -10px, $l: -145px);
+      }
+   }
 }

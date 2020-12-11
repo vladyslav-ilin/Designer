@@ -1,9 +1,16 @@
 .sun{
+    margin-bottom: 100px;
+    &__wrapper{
+        position: relative;
+    }
+    &__img{
+        @include align(false, true);
+        @include pos($t: 50px);
+    }
     &__container-fluid{
         position: relative;
         min-height: 360px;
         text-align: center;
-        margin-bottom: 110px;
     }
     &__title{
         @include align(false, true, relative);
@@ -12,9 +19,4 @@
         letter-spacing: 7.2px;
         margin-bottom: 145px;
     }
-}
-
-.parallax-window {
-    min-height: 400px;
-    background: transparent;
 }

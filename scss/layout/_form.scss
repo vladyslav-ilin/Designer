@@ -36,17 +36,10 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    &::before{
-      @include size(0, 100%);
-      @include pos(absolute, $t:0, $l:0);
-      content: '';
-      background: var(--bgr);
-      transition: all .5s ease;
-    }
+    transition: all .5s ease;
     &:hover{
-      &::before{
-        @include size(100%);
-      }
+      transform: scale(1.1);
+      background: var(--bgr);
     }
   }
   &__line{
